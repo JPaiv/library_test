@@ -64,7 +64,6 @@ def _query_book(books_list):
     """
         Query parameters can be empty but at least one query parameter has to exist.
     """
-    user_input = {}
     print('\n', "Query a book from the library!")
     user_input =  _ask_user_input_for_a_book()
     if user_input:
@@ -80,7 +79,6 @@ def _query_book(books_list):
 
 
 def _add_new_book(books_list):
-    user_input = {}
     print('\n', "Add a new book to the library!")
     user_input =  _ask_user_input_for_a_book()
     if len(user_input) < 4:
@@ -96,6 +94,7 @@ def _book_data_to_csv_file(books_list):
 
 
 def _ask_user_input_for_a_book():
+    user_input = {}
     user_input["BOOKNAME"] = input("Please give name of the book:")
     user_input["AUTHORNAME"] = input("Please give author of the book:")
     user_input["YEAR"] = input("Please give year when the book was written:")
